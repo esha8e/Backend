@@ -12,7 +12,7 @@ app.use(Cors())
 app.use(Bodyparser.urlencoded({extended:true}))
 app.use(Bodyparser.json())
 
-Mongoose.connect("mongodb+srv://miniproject:mongoproject123@cluster0.k8mtxxj.mongodb.net/EshopDB?retryWrites=true&w=majority")
+Mongoose.connect("mongodb+srv://sruthi:sruthikukku@cluster0.9ku0d77.mongodb.net/eshopDB?retryWrites=true&w=majority")
 
 app.post("/login",async(req,res)=>{
     const loginpg=req.body
@@ -33,6 +33,12 @@ app.post("/login",async(req,res)=>{
 
 })
 
+app.post("/signin",async(req,res)=>{
+  const signinpg=req.body
+  console.log(signinpg)
+  const ob=new signinModel(signinpg)
+  
+})
 
 
 
